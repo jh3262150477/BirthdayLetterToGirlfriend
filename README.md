@@ -8,7 +8,7 @@ This is an enchanting experience built with modern web technologies to create a 
 
 ## 🎯 Live Demo
 
-Experience the magic here: [https://jh3262150477.github.io/BirthdayLetterToGirlfriend/](https://jh3262150477.github.io/BirthdayLetterToGirlfriend/)
+Experience the magic here: [Website](https://togirlfriend.netlify.app/)
 
 ## 📁 Project Structure
 
