@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: "微软雅黑", "苹方", sans-serif;
+  font-size: 1vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-background{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../res/img/nightsky.jpg");
+  background-size: cover;
+  z-index: -99;
+}
+
+.container {
+  position: relative;
+  top: 0;
+}
+
+.envelope {
+  position: relative;
+  background: #34541A;
+  width: 48vmin;
+  height: 30vmin;
+  box-shadow: 0 0 12px #002b55;
+}
+
+.cover {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 20vmin solid #77a314;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 10vmin;
+  z-index: 3;
+}
+
+.cover:after {
+  position: absolute;
+  content: '';
+  border-left: 24.5vmin solid #93b743;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  left: -24vmin;
+  top: -10vmin;
+}
+
+.cover:before {
+  position: absolute;
+  content: '';
+  border-right: 24.5vmin solid #93b743;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -10vmin;
+  left: -0.4vmin;
+}
+
+@keyframes open {
+  100% {
+    transform: rotateX(180deg);
+    z-index: 1;
+  }
+}
+
+@keyframes close {
+  from {
+    transform: rotateX(-180deg);
+  }
+}
+
+.lid {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 20vmin solid #34541A;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 0;
+  transform-origin: top;
+  animation: close 1s;
+  z-index: 4;
+}
+
+.logo{
+  width: 15vmin;
+  height: 3vmin;
+  position: absolute;
+  z-index: 5;
+  bottom: 3vmin;
+  left: 16.5vmin;
+}
+
+.letter-mark{
+  width: 15vmin;
+  height: 12vmin;
+  position: absolute;
+  top: 8vmin;
+  left: 16.5vmin;
+  z-index: 5;
+}
+
+.container:hover .lid {
+  animation: open .5s;
+  animation-fill-mode: forwards;
+}
+
+.card-border {
+  position: absolute;
+  height: 25vmin;
+  width: 43vmin;
+  left: 2.5vmin;
+  padding: 1vmin;
+  box-sizing: border-box;
+  top: 0;
+  background: linear-gradient(45deg, #f25953 12.5%, #fbfaf5 12.5%, #fbfaf5 25%, #5590d6 25%, #5590d6 37.5%, #fbfaf5 37.5%, #fbfaf5 50%, #f25953 50%, #f25953 62.5%, #fbfaf5 62.5%, #fbfaf5 75%, #5590d6 75%, #5590d6 87.5%, #fbfaf5 87.5%, #fbfaf5 100%);
+  background-size: 70px 70px;
+  box-shadow: 0 0 3px #002b55;
+  z-index: 2;
+}
+
+.card {
+  width: 41vmin;
+  height: 23vmin;
+  background: url("../res/img/card_background.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card:after{
+  content: '';
+  position: absolute;
+  width:41vmin;
+  height: 23vmin;
+  top: 1vmin;
+  left: 1vmin;
+  backdrop-filter: blur(5px) brightness(1);
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+@keyframes slide {
+  100% {
+    transform: translateY(-15vmin);
+  }
+}
+
+.container:hover .card-border {
+  animation: slide .2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.card-title {
+  position: absolute;
+  top: 5vmin;
+  color: white;
+  z-index: 5;
+}
+
+.card-text {
+  padding-top: 1vmin;
+  line-height: 2.4vmin;
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: .5vmin;
+  text-decoration-thickness: 0.2vmin;
+  z-index: 5;
+}

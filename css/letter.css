@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: "微软雅黑", "苹方", sans-serif;
+  font-size: 1vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-background{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../res/img/nightsky.jpg");
+  background-size: cover;
+  z-index: -99;
+}
+
+.container {
+  position: relative;
+  top: 0;
+}
+
+.letter-border {
+  box-sizing: border-box;
+  width: 75vmin;
+  height: 90vmin;
+  padding: 1vmin;
+  background: linear-gradient(45deg, #f25953 12.5%, #fbfaf5 12.5%, #fbfaf5 25%, #5590d6 25%, #5590d6 37.5%, #fbfaf5 37.5%, #fbfaf5 50%, #f25953 50%, #f25953 62.5%, #fbfaf5 62.5%, #fbfaf5 75%, #5590d6 75%, #5590d6 87.5%, #fbfaf5 87.5%, #fbfaf5 100%);
+  background-size: 60px 60px;
+}
+
+.letter {
+  width: 73vmin;
+  height: 88vmin;
+  background: url("../res/img/card_background.png");
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter:after{
+  content: '';
+  position: absolute;
+  width:73vmin;
+  height: 88vmin;
+  top: 1vmin;
+  left: 1vmin;
+  backdrop-filter: blur(5px) brightness(1);
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.letter-title {
+  position: absolute;
+  top: 8vmin;
+  color: white;
+  z-index: 1;
+}
+
+.letter-text {
+  position: absolute;
+  padding-right: 8vmin;
+  line-height: 2.4vmin;
+  text-decoration: underline;
+  text-underline-offset: .5vmin;
+  text-decoration-thickness: 0.2vmin;
+  font-weight: normal;
+  left: 8vmin;
+  top: 15vmin;
+  color: white;
+  z-index: 1;
+}
+
+.letter-end {
+  cursor: pointer;
+  position: absolute;
+  bottom: 8vmin;
+  color: white;
+  z-index: 1;
+}
+
+.music-bar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 3vmin;
+  top: 3vmin;
+  width: 4vmin;
+  height: 4vmin;
+  opacity: .8;
+  border-radius: 50%;
+  background: gray;
+  cursor: pointer;
+}
+
+.music-icon {
+  width: 3vmin;
+  height: 3vmin;
+}
